@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Верес: дизайн интерьера (демо pro)</title>
+<meta name="description" content="Демо-лендинг студии интерьера: план квартиры достраивается по мере скролла. Студия вымышлена.">
+<meta property="og:title" content="Верес: дизайн интерьера">
+<meta property="og:description" content="Демо. Данные вымышлены.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231d2a24'/%3E%3Cpath d='M8 24V10h9a5 5 0 0 1 0 10h-9' fill='none' stroke='%23e9efe9' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300..700&family=Golos+Text:wght@400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="motion.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="#top">Верес</a>
+  <nav><a href="#story" data-roll>Как строим</a><a href="#price" data-roll>Стоимость</a></nav>
+  <a class="btn btn--sm" href="#price" data-magnetic>Обсудить проект</a>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <h1 data-wave data-wave-min="300" data-wave-max="650" data-wave-radius="190">Сначала план. Потом всё остальное</h1>
+    <p class="lead">Студия интерьера в Москве. Квартиру 62 м² ведём от обмеров до последней розетки, цена проекта фиксируется в договоре.</p>
+  </section>
+
+  <section class="manifest" aria-label="Подход">
+    <p id="manifest">Мы не рисуем красивые картинки, пока не согласована планировка. Сначала считаем, как вы живёте: где ставите чайник, куда ставите коляску, откуда падает свет. Потом выбираем цвет.</p>
+  </section>
+
+  <section class="story" id="story">
+    <div class="story__pin">
+      <div class="story__plan">
+        <svg viewBox="0 0 400 280" role="img" aria-label="План квартиры 62 м², который достраивается по этапам">
+          <g id="walls" fill="none" stroke="#1d2a24" stroke-width="3" stroke-linecap="square">
+            <path pathLength="1" d="M6 6H394V274H6Z"/>
+            <path pathLength="1" d="M222 6V122H394"/>
+            <path pathLength="1" d="M6 162H182V274"/>
+            <path pathLength="1" d="M182 162H222V122"/>
+          </g>
+          <g id="rooms">
+            <rect x="12" y="12" width="210" height="150"/>
+            <rect x="228" y="12" width="160" height="104"/>
+            <rect x="12" y="168" width="170" height="100"/>
+            <rect x="188" y="128" width="200" height="140"/>
+          </g>
+          <g id="names" font-size="11">
+            <text x="24" y="32">гостиная 24 м²</text><text x="240" y="32">кухня 14 м²</text>
+            <text x="24" y="188">спальня 15 м²</text><text x="200" y="148">прихожая, санузел</text>
+          </g>
+          <g id="furn" fill="none" stroke="#2f5d46" stroke-width="2">
+            <rect x="40" y="96" width="92" height="34" rx="6"/>
+            <rect x="148" y="52" width="46" height="46" rx="23"/>
+            <path d="M236 50h140v22h-22v38"/>
+            <rect x="24" y="208" width="82" height="50" rx="4"/>
+            <rect x="130" y="196" width="40" height="62"/>
+          </g>
+          <g id="lamps" fill="#b08a3e">
+            <circle cx="120" cy="72" r="5"/><circle cx="310" cy="88" r="5"/><circle cx="96" cy="232" r="5"/>
+          </g>
+          <g id="glows" fill="#b08a3e" opacity="0">
+            <circle cx="120" cy="72" r="46" opacity=".16"/><circle cx="310" cy="88" r="46" opacity=".16"/><circle cx="96" cy="232" r="46" opacity=".16"/>
+          </g>
+        </svg>
+      </div>
+      <div class="story__text">
+        <div class="cap" data-i="0"><h2>Обмеры</h2><p>Приезжаем с лазерным дальномером, проверяем углы и высоту, находим кривые стены. Ошибка в 2 см сейчас стоит часа работы, после ремонта стоит стены.</p></div>
+        <div class="cap" data-i="1"><h2>Планировка</h2><p>Рисуем три варианта. Решаем, что снести можно, а что нельзя, и согласовываем это до визуализаций.</p></div>
+        <div class="cap" data-i="2"><h2>Мебель и свет</h2><p>Расставляем мебель по размерам, а не по картинкам. Свет считаем по сценариям: утро, вечер, ночник.</p></div>
+        <div class="cap" data-i="3"><h2>Смета</h2><p class="sum"><span id="sum">0</span> ₽</p><p>3 500 ₽ за м² × 62 м². Эта сумма в договоре и не растёт по ходу работы.</p></div>
+        <div class="story__bar" aria-hidden="true"><i id="bar"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="marq" aria-hidden="true"><div class="marq__t" id="marq"><span>обмеры</span><span>планировка</span><span>визуализация</span><span>смета</span><span>надзор</span><span>обмеры</span><span>планировка</span><span>визуализация</span><span>смета</span><span>надзор</span></div></div>
+
+  <section class="sec" id="price">
+    <h2 class="mask">Стоимость</h2>
+    <div class="plans" data-stagger>
+      <article><h3>Планировка</h3><p class="big">от 25 000 ₽</p><p>Три варианта расстановки и разбор зон. Хватает, если ремонт делаете сами.</p></article>
+      <article><h3>Дизайн-проект</h3><p class="big">3 500 ₽/м²</p><p>Чертежи, 3D, спецификации и смета. Цена в договоре.</p></article>
+      <article><h3>С надзором</h3><p class="big">5 200 ₽/м²</p><p>Раз в неделю приезжаем на объект и принимаем работы по проекту.</p></article>
+    </div>
+    <form id="lead" class="lead-form" novalidate>
+      <label for="phone">Телефон или Telegram</label>
+      <input id="phone" type="text" placeholder="@ник или +7 900 000-00-00">
+      <button class="btn" type="submit" data-magnetic>Обсудить проект</button>
+      <p class="ok" id="ok" hidden>Спасибо. Это демо-сайт: заявка никуда не отправляется.</p>
+    </form>
+  </section>
+</main>
+<footer><p>Верес: вымышленная студия. Цены иллюстративные. Демо.</p></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="motion.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
